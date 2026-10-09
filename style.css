@@ -1,0 +1,958 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+ 
+:root {
+
+    --preto: #080d13;
+
+    --azul-escuro: #071421;
+
+    --vermelho: #ed102b;
+
+    --cinza: #6b7280;
+
+    --borda: #d5d5d5;
+
+    --branco: #ffffff;
+
+}
+ 
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #ffffff;
+
+    color: #171717;
+
+    font-size: 14px;
+
+}
+ 
+a {
+
+    text-decoration: none;
+
+}
+ 
+.topo {
+
+    background-color: var(--azul-escuro);
+
+    border-bottom: 2px solid #202b36;
+
+}
+ 
+.topo .navbar {
+
+    padding: 12px 22px;
+
+}
+ 
+.logo {
+
+    color: var(--branco) !important;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    white-space: nowrap;
+
+}
+ 
+.logo span {
+
+    color: var(--vermelho);
+
+    margin-left: 3px;
+
+}
+ 
+.topo .nav-link {
+
+    color: #c5ccd4;
+
+    font-size: 13px;
+
+    padding: 10px 12px !important;
+
+    transition: 0.2s;
+
+}
+ 
+.topo .nav-link:hover,
+
+.topo .nav-link.active {
+
+    color: var(--branco);
+
+}
+ 
+.topo .nav-link.active::after {
+
+    content: "";
+
+    display: block;
+
+    width: 20px;
+
+    height: 2px;
+
+    background-color: var(--vermelho);
+
+    margin-top: 5px;
+
+}
+ 
+.banner {
+
+    min-height: 270px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    color: var(--branco);
+
+    background-color: #101820;
+
+    background-image:
+
+        linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.78) 32%, rgba(0, 0, 0, 0.1) 100%),
+
+        url("img/banner-carro.jpg");
+
+    background-position: center;
+
+    background-size: cover;
+
+}
+ 
+.banner-conteudo {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 35px 30px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+ 
+.banner h1 {
+
+    font-size: clamp(28px, 3vw, 43px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+
+    max-width: 430px;
+
+}
+ 
+.banner p {
+
+    color: #e0e0e0;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    max-width: 350px;
+
+    margin-bottom: 20px;
+
+}
+ 
+.banner-botoes {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+ 
+.banner-botoes .btn {
+
+    font-size: 12px;
+
+    padding: 10px 16px;
+
+    border-radius: 5px;
+
+}
+ 
+.banner-botoes .btn-danger {
+
+    background-color: var(--vermelho);
+
+    border-color: var(--vermelho);
+
+}
+ 
+.filtros {
+
+    padding-top: 25px;
+
+    padding-bottom: 25px;
+
+}
+ 
+.filtros .form-label {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #333333;
+
+    margin-bottom: 7px;
+
+}
+ 
+.filtros .form-select {
+
+    font-size: 12px;
+
+    min-height: 38px;
+
+    border-radius: 3px;
+
+    border-color: #bcbcbc;
+
+    color: #333333;
+
+    background-color: #ffffff;
+
+}
+ 
+.filtros .form-select:focus {
+
+    border-color: var(--vermelho);
+
+    box-shadow: 0 0 0 2px rgba(237, 16, 43, 0.1);
+
+}
+ 
+.filtros .btn-danger {
+
+    background-color: var(--vermelho);
+
+    border-color: var(--vermelho);
+
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    padding: 9px 18px;
+
+}
+ 
+.marcas {
+
+    padding-top: 8px;
+
+    padding-bottom: 22px;
+
+}
+ 
+.marcas h2,
+
+.titulo-secao h2 {
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+    color: #202020;
+
+}
+ 
+.marca-card {
+
+    min-height: 105px;
+
+    padding: 12px 8px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background-color: #ffffff;
+
+    color: #202020;
+
+    transition: border-color 0.2s, transform 0.2s;
+
+}
+ 
+.marca-card:hover {
+
+    border-color: var(--vermelho);
+
+    transform: translateY(-3px);
+
+}
+ 
+.marca-card.selecionada {
+
+    border: 1.5px solid var(--vermelho);
+
+}
+ 
+.marca-card img {
+
+    width: 100%;
+
+    max-width: 65px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+}
+ 
+.marca-card span {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+ 
+.filtro-ativo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 14px;
+
+    padding: 6px 10px;
+
+    background-color: #fff0f1;
+
+    border: 1px solid #ffc6cd;
+
+    border-radius: 20px;
+
+    color: #b70d24;
+
+    font-size: 12px;
+
+}
+ 
+.filtro-ativo a {
+
+    color: #b70d24;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+}
+ 
+.destaques {
+
+    padding-top: 10px;
+
+    padding-bottom: 30px;
+
+}
+ 
+.titulo-secao {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+ 
+.titulo-secao h2 {
+
+    margin-bottom: 0;
+
+}
+ 
+.titulo-secao > a {
+
+    color: var(--vermelho);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+ 
+.carro-card {
+
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    transition: box-shadow 0.2s, transform 0.2s;
+
+}
+ 
+.carro-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+
+}
+ 
+.carro-card > img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 165px;
+
+    object-fit: contain;
+
+    background-color: #f4f5f6;
+
+}
+ 
+.carro-info {
+
+    padding: 12px;
+
+    position: relative;
+
+}
+ 
+.carro-titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+}
+ 
+.carro-titulo h3 {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+ 
+.carro-titulo span {
+
+    color: #777777;
+
+    font-size: 11px;
+
+}
+ 
+.carro-info > p {
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    margin: 9px 0;
+
+}
+ 
+.carro-preco {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding-top: 9px;
+
+    border-top: 1px solid #eeeeee;
+
+}
+ 
+.carro-preco span {
+
+    font-size: 10px;
+
+    color: #888888;
+
+}
+ 
+.carro-preco strong {
+
+    color: var(--vermelho);
+
+    font-size: 15px;
+
+}
+ 
+.favorito-btn {
+
+    position: absolute;
+
+    right: 10px;
+
+    top: 7px;
+
+    border: none;
+
+    background-color: #ffffff;
+
+    color: #555555;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+ 
+.favorito-btn[aria-pressed="true"] {
+
+    color: var(--vermelho);
+
+}
+ 
+.comparacao {
+
+    padding-top: 10px;
+
+    padding-bottom: 65px;
+
+}
+ 
+.tabela-comparacao {
+
+    width: 100%;
+
+    min-width: 570px;
+
+    border-collapse: collapse;
+
+    margin-bottom: 0;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+}
+ 
+.tabela-comparacao th,
+
+.tabela-comparacao td {
+
+    border: 1px solid #a9a9a9;
+
+    padding: 10px 12px;
+
+    font-size: 14px;
+
+}
+ 
+.tabela-comparacao thead th {
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    background-color: #ffffff;
+
+}
+ 
+.tabela-comparacao tbody th {
+
+    width: 150px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+}
+ 
+.tabela-comparacao .preco-tabela {
+
+    color: var(--vermelho);
+
+    font-weight: 700;
+
+}
+ 
+.rodape {
+
+    background: linear-gradient(120deg, #071421, #02070d);
+
+    color: #c5ccd4;
+
+    padding: 45px 0 0;
+
+    border-top: 2px solid #29333e;
+
+}
+ 
+.logo-rodape {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+}
+ 
+.rodape p {
+
+    max-width: 300px;
+
+    color: #aab3bd;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+ 
+.rodape h4 {
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+ 
+.rodape h4::after {
+
+    content: "";
+
+    display: block;
+
+    width: 25px;
+
+    height: 2px;
+
+    margin-top: 8px;
+
+    background-color: var(--vermelho);
+
+}
+ 
+.rodape a:not(.logo) {
+
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: #aab3bd;
+
+    font-size: 13px;
+
+}
+ 
+.rodape a:not(.logo):hover {
+
+    color: #ffffff;
+
+}
+ 
+.rodape-final {
+
+    margin-top: 30px;
+
+    padding: 18px 0;
+
+    border-top: 1px solid #26323e;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #929eaa;
+
+}
+ 
+@media (min-width: 1200px) {
+
+    .filtros,
+
+    .marcas,
+
+    .destaques,
+
+    .comparacao {
+
+        max-width: 1320px;
+
+    }
+
+}
+ 
+@media (max-width: 991px) {
+
+    .topo .navbar {
+
+        padding: 10px 15px;
+
+    }
+ 
+    .logo {
+
+        font-size: 26px;
+
+    }
+ 
+    .topo .navbar-nav {
+
+        align-items: flex-start !important;
+
+        padding-top: 12px;
+
+    }
+ 
+    .banner {
+
+        min-height: 250px;
+
+        background-position: 60% center;
+
+    }
+ 
+    .banner-conteudo {
+
+        padding: 30px 22px;
+
+    }
+ 
+    .marca-card {
+
+        min-height: 100px;
+
+    }
+
+}
+ 
+@media (max-width: 575px) {
+
+    body {
+
+        font-size: 13px;
+
+    }
+ 
+    .banner {
+
+        min-height: 260px;
+
+        background-position: 62% center;
+
+    }
+ 
+    .banner-conteudo {
+
+        padding: 28px 18px;
+
+    }
+ 
+    .banner h1 {
+
+        font-size: 29px;
+
+        max-width: 280px;
+
+    }
+ 
+    .banner p {
+
+        max-width: 270px;
+
+        font-size: 13px;
+
+    }
+ 
+    .banner-botoes .btn {
+
+        padding: 9px 11px;
+
+        font-size: 11px;
+
+    }
+ 
+    .filtros {
+
+        padding: 20px 18px;
+
+    }
+ 
+    .marcas,
+
+    .destaques,
+
+    .comparacao {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+ 
+    .marcas h2,
+
+    .titulo-secao h2 {
+
+        font-size: 17px;
+
+    }
+ 
+    .marca-card {
+
+        min-height: 95px;
+
+        border-radius: 9px;
+
+    }
+ 
+    .marca-card img {
+
+        height: 42px;
+
+        max-width: 58px;
+
+    }
+ 
+    .marca-card span {
+
+        font-size: 10px;
+
+    }
+ 
+    .carro-card > img {
+
+        height: 145px;
+
+    }
+ 
+    .carro-info {
+
+        padding: 10px;
+
+    }
+ 
+    .carro-titulo h3 {
+
+        font-size: 13px;
+
+    }
+ 
+    .carro-preco strong {
+
+        font-size: 13px;
+
+    }
+ 
+    .titulo-secao {
+
+        align-items: flex-start;
+
+    }
+ 
+    .titulo-secao > a {
+
+        font-size: 11px;
+
+    }
+ 
+    .tabela-comparacao th,
+
+    .tabela-comparacao td {
+
+        padding: 8px;
+
+        font-size: 12px;
+
+    }
+ 
+    .tabela-comparacao thead th {
+
+        font-size: 13px;
+
+    }
+ 
+    .rodape {
+
+        padding-top: 30px;
+
+    }
+
+}
+ 
