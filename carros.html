@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>CarZone BR</title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/inicio.css">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+ 
+<body>
+
+<header class="topo">
+ 
+        <nav class="navbar navbar-expand-lg navbar-dark">
+ 
+            <div class="container-fluid">
+ 
+                <a class="navbar-brand logo" href="inicio.html">
+
+                    <h1 style="font-family: 'Orbitron', sans-serif;">CarZone<span>BR</span></h1>
+</a>
+ 
+                <button class="navbar-toggler" type="button"
+
+                    data-bs-toggle="collapse"
+
+                    data-bs-target="#menuPrincipal"
+
+                    aria-controls="menuPrincipal"
+
+                    aria-expanded="false"
+
+                    aria-label="Abrir menu">
+ 
+                    <span class="navbar-toggler-icon"></span>
+ 
+                </button>
+ 
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+ 
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+ 
+                        <li class="nav-item">
+<a class="nav-link active" href="inicio.html">Início</a>
+</li>
+ 
+                        <li class="nav-item">
+<a class="nav-link" href="carros.html">Carros</a>
+</li>
+ 
+                        <li class="nav-item">
+<a class="nav-link" href="comparar.html">Comparar</a>
+</li>
+ 
+                        <li class="nav-item">
+<a class="nav-link" href="vender.html">Vender</a>
+</li>
+ 
+                        <li class="nav-item">
+<a class="nav-link" href="login.html">♙ Login</a>
+</li>
+ 
+                    </ul>
+ 
+                </div>
+ 
+            </div>
+ 
+        </nav>
+ 
+    </header>
+
+
+      
+
+        
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+ 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarZoneBR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header>
+    <div class="logo">CarZone<span>BR</span></div>
+ 
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Carros</a>
+        <a href="#">Comprar</a>
+        <a href="#">Vender</a>
+        <a href="#">♡ Favoritos</a>
+    </nav>
+ 
+    <a href="#" class="login">♙ Login</a>
+</header>
+ 
+<main>
+    <section class="titulo">
+        <h1>Encontre seu próximo carro</h1>
+        <p>Explore ofertas e encontre o modelo ideal para você.</p>
+    </section>
+ 
+    <div class="layout">
+        <aside class="filtros">
+            <div class="filtro">
+                <label for="marca">Marca</label>
+                <select id="marca">
+                    <option>Todas as marcas</option>
+                    <option>Honda</option>
+                    <option>Toyota</option>
+                    <option>Volkswagen</option>
+                    <option>Chevrolet</option>
+                    <option>BMW</option>
+                    <option>Fiat</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="modelo">Modelo</label>
+                <select id="modelo">
+                    <option>Todos os modelos</option>
+                    <option>Civic</option>
+                    <option>Corolla</option>
+                    <option>T-Cross</option>
+                    <option>Onix</option>
+                    <option>320i</option>
+                    <option>Pulse</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="preco">Faixa de preço</label>
+                <select id="preco">
+                    <option>Qualquer preço</option>
+                    <option>Até R$ 50 mil</option>
+                    <option>Até R$ 100 mil</option>
+                    <option>Até R$ 150 mil</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="ano">Ano</label>
+                <select id="ano">
+                    <option>Qualquer ano</option>
+                    <option>2022 ou mais novo</option>
+                    <option>2020 ou mais novo</option>
+                    <option>2018 ou mais novo</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="km">Quilometragem</label>
+                <select id="km">
+                    <option>Qualquer quilometragem</option>
+                    <option>Até 30.000 km</option>
+                    <option>Até 50.000 km</option>
+                    <option>Até 100.000 km</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="cambio">Câmbio</label>
+                <select id="cambio">
+                    <option>Qualquer câmbio</option>
+                    <option>Automático</option>
+                    <option>Manual</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="combustivel">Combustível</label>
+                <select id="combustivel">
+                    <option>Qualquer combustível</option>
+                    <option>Flex</option>
+                    <option>Gasolina</option>
+                    <option>Diesel</option>
+                </select>
+            </div>
+ 
+            <div class="filtro">
+                <label for="categoria">Categoria</label>
+                <select id="categoria">
+                    <option>Todas as categorias</option>
+                    <option>Sedan</option>
+                    <option>Hatch</option>
+                    <option>SUV</option>
+                </select>
+            </div>
+ 
+            <button class="botao vermelho" onclick="aplicarFiltros()">
+                Aplicar filtros
+            </button>
+ 
+            <button class="botao branco" onclick="limparFiltros()">
+                Limpar filtros
+            </button>
+        </aside>
+ 
+        <section class="resultados">
+            <div class="ordenacao">
+                <label for="ordenar">Ordenar por</label>
+                <select id="ordenar">
+                    <option>Mais relevantes</option>
+                    <option>Menor preço</option>
+                    <option>Maior preço</option>
+                </select>
+            </div>
+ 
+            <div class="carros" id="lista-carros"></div>
+ 
+            <div class="banner">
+                <div>
+                    <h3>Não sabe qual escolher?</h3>
+                    <p>Compare modelos lado a lado.</p>
+                </div>
+                <button onclick="compararCarros()">
+                    Comparar carros →
+                </button>
+            </div>
+        </section>
+    </div>
+</main>
+ 
+<footer>
+    <div class="logo">CarZone<span>BR</span></div>
+    <p>CarZoneBR © 2026. Todos os direitos reservados.</p>
+</footer>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+    </body>
